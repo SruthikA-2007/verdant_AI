@@ -1,0 +1,274 @@
+/* ── BusinessProfilePage ─────────────────────────────────────────────────── */
+.biz-profile {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Progress */
+.biz-profile__progress-wrap {
+  height: 4px;
+  background: var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.biz-profile__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--purple));
+  border-radius: 0 2px 2px 0;
+  transition: width 0.4s ease;
+}
+
+/* Tabs */
+.biz-profile__tabs {
+  display: flex;
+  gap: 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  overflow-x: auto;
+}
+.biz-profile__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: default;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.biz-profile__tab--active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 700;
+}
+.biz-profile__tab--done {
+  color: var(--success);
+  cursor: pointer;
+}
+.biz-profile__tab--done:hover { color: var(--primary-dark); }
+
+.biz-profile__tab-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--border-light);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.biz-profile__tab--active .biz-profile__tab-num {
+  background: var(--primary);
+  color: white;
+}
+.biz-profile__tab--done .biz-profile__tab-num {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+/* Body */
+.biz-profile__body {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 36px 24px 48px;
+}
+
+.biz-profile__card {
+  width: 100%;
+  max-width: 600px;
+  padding: 36px 32px 28px;
+}
+
+.biz-profile__card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.biz-profile__card-icon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.biz-profile__card-step {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.biz-profile__card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.biz-profile__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.biz-profile__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.biz-profile__field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.biz-profile__hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: -2px;
+}
+
+/* Chips */
+.biz-profile__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.biz-profile__chip {
+  padding: 7px 14px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  background: #fafafa;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.biz-profile__chip:hover { border-color: var(--primary); color: var(--primary); }
+.biz-profile__chip--active {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Toggle */
+.biz-profile__toggle-row {
+  display: flex;
+  gap: 10px;
+}
+.biz-profile__toggle {
+  flex: 1;
+  padding: 11px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: #fafafa;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.biz-profile__toggle:hover { border-color: var(--primary); }
+.biz-profile__toggle--active {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Location badge */
+.biz-profile__location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--success-light);
+  color: var(--success);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+/* Interest Grid */
+.biz-profile__interest-sub {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.biz-profile__interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.biz-profile__interest-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px;
+  border-radius: 16px;
+  border: 1.5px solid var(--border);
+  background: #fafafa;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  text-align: center;
+}
+.biz-profile__interest-card:hover { border-color: var(--primary); }
+.biz-profile__interest-card--active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.biz-profile__interest-emoji { font-size: 1.6rem; }
+
+/* Actions */
+.biz-profile__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+.biz-profile__next { margin-left: auto; }
+
+@media (max-width: 600px) {
+  .biz-profile__card { padding: 24px 18px; }
+  .biz-profile__interest-grid { grid-template-columns: repeat(2, 1fr); }
+  .biz-profile__tabs { padding: 0 16px; }
+  .biz-profile__tab-label { display: none; }
+  .biz-profile__field-row { grid-template-columns: 1fr; }
+}

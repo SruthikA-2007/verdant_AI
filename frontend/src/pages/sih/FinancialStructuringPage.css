@@ -1,0 +1,245 @@
+/* ── FinancialStructuringPage ─────────────────────────────────────────────── */
+.fin-plan {
+  padding: 0 0 56px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* Header */
+.fin-plan__header {
+  background: linear-gradient(135deg, #064e3b, #065f46 60%, #047857);
+  padding: 32px 36px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.fin-plan__header-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+}
+.fin-plan__header-left h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.fin-plan__header-loc { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
+
+.fin-plan__kpis {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.fin-plan__kpi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+.fin-plan__kpi-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.05em;
+}
+.fin-plan__kpi-value {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+.fin-plan__kpi-value--primary { color: #bfdbfe; }
+.fin-plan__kpi-value--green   { color: #6ee7b7; }
+.fin-plan__kpi-value--orange  { color: #fcd34d; }
+
+/* Body */
+.fin-plan__body {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Section */
+.fin-plan__section {
+  padding: 22px 24px;
+}
+.fin-plan__section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* Tables */
+.fin-plan__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+.fin-plan__table td {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+}
+.fin-plan__table tr:last-child td { border-bottom: none; }
+.fin-plan__table-amount { text-align: right; font-weight: 600; }
+.fin-plan__table-amount--green { color: var(--success); }
+.fin-plan__table-amount--red   { color: #DC2626; }
+.fin-plan__table-total td { font-weight: 700; color: var(--text-primary); border-top: 1.5px solid var(--border); padding-top: 12px; }
+
+/* Capital */
+.fin-plan__capital-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 16px;
+}
+.fin-plan__capital-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fin-plan__capital-item:last-child { align-items: flex-end; }
+.fin-plan__capital-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.fin-plan__capital-value {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.fin-plan__capital-value--green { color: var(--success); }
+.fin-plan__capital-divider {
+  width: 1px; height: 40px;
+  background: var(--border);
+  margin: 0 20px;
+}
+
+/* Gap badge */
+.fin-plan__gap-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+.fin-plan__gap-badge--zero  { background: var(--success-light); color: var(--success); border: 1px solid #BBF7D0; }
+.fin-plan__gap-badge--low   { background: #EFF6FF; color: var(--primary); border: 1px solid #BFDBFE; }
+.fin-plan__gap-badge--high  { background: #FFFBEB; color: #92400E; border: 1px solid #FDE68A; }
+.fin-plan__gap-badge div { display: flex; flex-direction: column; gap: 2px; }
+.fin-plan__gap-badge strong { font-weight: 700; }
+
+/* Two-col */
+.fin-plan__two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.fin-plan__col-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Profit banner */
+.fin-plan__profit-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--success-light);
+  border: 1px solid #BBF7D0;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--success);
+}
+.fin-plan__profit-banner strong { font-size: 1.15rem; font-weight: 900; margin-left: auto; }
+
+/* Break-even */
+.fin-plan__break-even {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  border-left: 4px solid #D97706;
+}
+.fin-plan__be-num {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.fin-plan__be-num span {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #D97706;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+.fin-plan__be-num small { font-size: 1.1rem; font-weight: 600; color: #92400E; }
+.fin-plan__break-even h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.fin-plan__break-even p { font-size: 0.84rem; color: var(--text-secondary); }
+
+/* Schemes */
+.fin-plan__schemes-sub {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.fin-plan__schemes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.fin-plan__scheme-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fafbff;
+}
+.fin-plan__scheme-emoji { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.fin-plan__scheme-card strong { font-size: 0.88rem; font-weight: 700; color: var(--text-primary); display: block; margin-bottom: 3px; }
+.fin-plan__scheme-agency  { font-size: 0.75rem; color: var(--primary); font-weight: 600; margin-bottom: 4px; }
+.fin-plan__scheme-detail  { font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 2px; }
+.fin-plan__scheme-eligibility { font-size: 0.76rem; color: var(--text-muted); font-style: italic; margin-top: 4px; line-height: 1.4; }
+
+/* CTA */
+.fin-plan__cta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 840px) {
+  .fin-plan__header { flex-direction: column; align-items: flex-start; padding: 24px 20px; }
+  .fin-plan__kpis { flex-direction: row; gap: 16px; }
+  .fin-plan__kpi { align-items: flex-start; }
+  .fin-plan__body { padding: 20px 18px; }
+  .fin-plan__two-col { grid-template-columns: 1fr; }
+  .fin-plan__schemes { grid-template-columns: 1fr; }
+}

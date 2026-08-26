@@ -1,0 +1,276 @@
+/* ── HyperLocalAnalysisPage ──────────────────────────────────────────────── */
+.local-analysis {
+  padding: 28px 32px 56px;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+.local-analysis__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a 60%, #1d4ed8);
+  border-radius: 20px;
+  padding: 32px 32px;
+  color: white;
+  gap: 20px;
+}
+.local-analysis__header-left { flex: 1; }
+
+.local-analysis__location-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.14);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 12px;
+}
+
+.local-analysis__header-left h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+.local-analysis__business-name {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.local-analysis__overall-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 20px 24px;
+  border-radius: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.local-analysis__score-big {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+.local-analysis__score-den {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: -4px;
+  opacity: 0.7;
+}
+.local-analysis__score-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 8px;
+}
+
+/* Loading */
+.local-analysis__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.local-analysis__loading-bar {
+  width: 260px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.local-analysis__loading-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--purple));
+  border-radius: 99px;
+  animation: loading-sweep 2s ease-in-out infinite;
+}
+@keyframes loading-sweep {
+  0%   { width: 0%;   margin-left: 0; }
+  50%  { width: 60%;  margin-left: 20%; }
+  100% { width: 0%;   margin-left: 100%; }
+}
+
+/* Grid */
+.local-analysis__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.local-analysis__dim-card {
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.4s ease both;
+}
+
+.local-analysis__dim-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.local-analysis__dim-emoji { font-size: 1.4rem; flex-shrink: 0; }
+.local-analysis__dim-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.local-analysis__dim-score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.local-analysis__dim-score {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.local-analysis__dim-status {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+}
+
+.local-analysis__dim-bar-track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.local-analysis__dim-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.8s ease;
+}
+.local-analysis__dim-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Seasonal chart */
+.local-analysis__seasonal {
+  padding: 20px 20px 8px;
+  animation: fadeIn 0.5s ease 0.2s both;
+}
+.local-analysis__seasonal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.local-analysis__seasonal-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Summary table */
+.local-analysis__summary {
+  padding: 20px 24px;
+  animation: fadeIn 0.5s ease 0.3s both;
+}
+.local-analysis__summary h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+.local-analysis__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.local-analysis__table td {
+  padding: 7px 8px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+.local-analysis__table tr:last-child td { border-bottom: none; }
+
+.local-analysis__mini-bar-wrap {
+  width: 120px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.local-analysis__mini-bar {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s ease;
+}
+.local-analysis__table-score {
+  font-weight: 700;
+  text-align: right;
+  font-size: 0.9rem;
+}
+.local-analysis__table-total td {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  padding-top: 12px;
+}
+
+/* Insight */
+.local-analysis__insight {
+  padding: 20px 24px;
+  border-left: 3px solid var(--primary);
+  animation: fadeIn 0.5s ease 0.4s both;
+}
+.local-analysis__insight-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.local-analysis__insight-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.local-analysis__insight p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.local-analysis__notice {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* CTA */
+.local-analysis__cta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .local-analysis__grid { grid-template-columns: repeat(2, 1fr); }
+  .local-analysis__header { flex-direction: column; }
+  .local-analysis__overall-score { width: 100%; }
+  .local-analysis { padding: 20px 18px 40px; }
+}
+@media (max-width: 560px) {
+  .local-analysis__grid { grid-template-columns: 1fr; }
+}

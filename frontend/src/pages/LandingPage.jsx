@@ -39,7 +39,7 @@ export default function LandingPage() {
         </div>
         <div className="landing__nav-cta">
           <button className="btn btn-outline btn-sm" onClick={() => navigate('/login')}>Sign In</button>
-          <button className="btn btn-primary btn-sm" onClick={() => navigate('/login')}>Start Free Trial</button>
+          <button className="btn btn-primary btn-sm" onClick={() => navigate('/login')}>Get Started</button>
         </div>
       </nav>
 
@@ -59,10 +59,7 @@ export default function LandingPage() {
         </p>
         <div className="landing__hero-actions">
           <button className="btn btn-primary btn-lg" onClick={() => navigate('/login')}>
-            Start Free Trial <ArrowRight size={18} />
-          </button>
-          <button className="btn btn-outline btn-lg" onClick={() => navigate('/login')}>
-            View Live Demo
+            Get Started <ArrowRight size={18} />
           </button>
         </div>
         <div className="landing__hero-proof">

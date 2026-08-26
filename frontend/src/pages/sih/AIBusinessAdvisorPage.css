@@ -1,0 +1,243 @@
+/* ── AIBusinessAdvisorPage ────────────────────────────────────────────────── */
+.ai-advisor {
+  padding: 32px 32px 56px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Header */
+.ai-advisor__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  border-radius: 20px;
+  color: white;
+}
+.ai-advisor__header-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.14);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ai-advisor__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 5px;
+}
+.ai-advisor__subtitle {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.5;
+}
+
+/* Loading */
+.ai-advisor__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 280px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.ai-advisor__loading-dots {
+  display: flex;
+  gap: 8px;
+}
+.ai-advisor__loading-dots span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.ai-advisor__loading-dots span:nth-child(1) { animation: pulse-dot 1.2s ease infinite; }
+.ai-advisor__loading-dots span:nth-child(2) { animation: pulse-dot 1.2s ease infinite 0.2s; }
+.ai-advisor__loading-dots span:nth-child(3) { animation: pulse-dot 1.2s ease infinite 0.4s; }
+
+/* Tagline */
+.ai-advisor__tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.ai-advisor__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.ai-advisor__card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+  animation: fadeIn 0.4s ease both;
+}
+.ai-advisor__card:nth-child(2) { animation-delay: 0.1s; }
+.ai-advisor__card:nth-child(3) { animation-delay: 0.2s; }
+.ai-advisor__card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.ai-advisor__card--selected { border-color: var(--primary) !important; }
+
+/* Rank */
+.ai-advisor__rank {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ai-advisor__medal { font-size: 1.4rem; }
+.ai-advisor__rank-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Business name */
+.ai-advisor__idea-name {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.ai-advisor__idea-emoji { font-size: 2rem; flex-shrink: 0; }
+.ai-advisor__idea-name h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+/* Overall score */
+.ai-advisor__overall {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+.ai-advisor__overall-num {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.ai-advisor__overall-num span { font-size: 1rem; font-weight: 600; }
+.ai-advisor__overall-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Score bars */
+.ai-advisor__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ai-advisor__score-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ai-advisor__score-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  width: 100px;
+  flex-shrink: 0;
+}
+.ai-advisor__score-track {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.ai-advisor__score-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.8s ease;
+}
+.ai-advisor__score-val {
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Why */
+.ai-advisor__why {
+  background: var(--border-light);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.ai-advisor__why-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.ai-advisor__why ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ai-advisor__why li {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Meta */
+.ai-advisor__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* CTA */
+.ai-advisor__cta {
+  width: 100%;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Note */
+.ai-advisor__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  font-size: 0.8rem;
+  color: #92400E;
+}
+
+@media (max-width: 960px) {
+  .ai-advisor__cards { grid-template-columns: 1fr; }
+  .ai-advisor { padding: 20px 18px 40px; }
+}

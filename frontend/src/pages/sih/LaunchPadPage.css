@@ -1,0 +1,247 @@
+/* ── LaunchPadPage ────────────────────────────────────────────────────────── */
+.launchpad {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.launchpad__hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  padding: 36px 36px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+.launchpad__hero-rocket { font-size: 3.5rem; line-height: 1; }
+.launchpad__hero-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 6px;
+}
+.launchpad__hero-content h1 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+.launchpad__hero-loc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Summary strip */
+.launchpad__summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+.launchpad__kpi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-right: 1px solid var(--border);
+}
+.launchpad__kpi:last-child { border-right: none; }
+.launchpad__kpi > span { font-size: 1.5rem; }
+.launchpad__kpi-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+.launchpad__kpi-value {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.launchpad__kpi-value--green  { color: var(--success); }
+.launchpad__kpi-value--orange { color: #D97706; }
+
+/* Body */
+.launchpad__body {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  padding: 28px 32px 48px;
+  flex: 1;
+}
+
+/* Checklist */
+.launchpad__checklist-section { display: flex; flex-direction: column; gap: 16px; }
+
+.launchpad__checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.launchpad__checklist-header h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.launchpad__checklist-header p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.launchpad__progress-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.launchpad__progress-ring {
+  position: relative;
+  width: 60px; height: 60px;
+}
+.launchpad__progress-ring svg { width: 100%; height: 100%; }
+.launchpad__progress-ring span {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--success);
+}
+.launchpad__progress-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.launchpad__weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.launchpad__week {
+  padding: 18px 20px;
+  animation: fadeIn 0.4s ease both;
+}
+.launchpad__week:nth-child(2) { animation-delay: 0.1s; }
+.launchpad__week:nth-child(3) { animation-delay: 0.2s; }
+.launchpad__week:nth-child(4) { animation-delay: 0.3s; }
+
+.launchpad__week-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.launchpad__tasks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.launchpad__task {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+}
+.launchpad__task:hover { background: var(--border-light); }
+.launchpad__task--done {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.launchpad__task svg { flex-shrink: 0; margin-top: 1px; }
+
+/* Sidebar */
+.launchpad__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.launchpad__strengths,
+.launchpad__challenges {
+  padding: 18px 20px;
+}
+.launchpad__strengths h3,
+.launchpad__challenges h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.launchpad__strengths ul,
+.launchpad__challenges ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.launchpad__strengths li { font-size: 0.82rem; color: var(--text-secondary); }
+.launchpad__challenges li { font-size: 0.82rem; color: var(--text-secondary); }
+
+/* GrowPilot CTA card */
+.launchpad__growpilot-cta {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid var(--primary);
+  background: linear-gradient(160deg, #EFF6FF, #f0f4ff);
+  animation: fadeIn 0.5s ease 0.3s both;
+}
+.launchpad__cta-icon { font-size: 2rem; }
+.launchpad__growpilot-cta h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+.launchpad__growpilot-cta p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.launchpad__gp-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.launchpad__gp-features li { font-size: 0.82rem; color: var(--text-primary); font-weight: 500; }
+
+.launchpad__launch-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+@media (max-width: 960px) {
+  .launchpad__body { grid-template-columns: 1fr; padding: 20px 18px 36px; }
+  .launchpad__summary { grid-template-columns: repeat(2, 1fr); }
+  .launchpad__kpi:nth-child(2) { border-right: none; }
+  .launchpad__hero { padding: 24px 20px; }
+}
+@media (max-width: 560px) {
+  .launchpad__summary { grid-template-columns: 1fr 1fr; }
+  .launchpad__kpi { padding: 14px 16px; }
+}
