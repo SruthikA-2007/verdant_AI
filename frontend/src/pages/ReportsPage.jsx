@@ -105,7 +105,7 @@ export default function ReportsPage({ business }) {
           </div>
           <div className="rpt-forecast-content">
             <h3>🚀 AI Sales Forecast — Next 7 Days</h3>
-            <p>Based on your last 30 days of sales patterns, seasonal trends, and current inventory levels, GrowPilot AI predicts:</p>
+            <p>Based on your last 30 days of sales patterns, seasonal trends, and current inventory levels, Verdant AI predicts:</p>
             <div className="rpt-forecast-metrics">
               <div className="rpt-forecast-metric">
                 <span>Projected Revenue</span>
@@ -130,3 +130,4 @@ export default function ReportsPage({ business }) {
     </div>
   );
 }
+

@@ -124,7 +124,7 @@ export default function App() {
     };
     saveStoredState(USER_KEY, nextUser);
     setSession(prev => ({ ...prev, user: nextUser }));
-    addToast('Welcome to GrowPilot AI!', 'success');
+    addToast('Welcome to Verdant AI!', 'success');
     // Always go to the AI Advisor as the primary entry point
     return '/advisor';
   };
@@ -437,3 +437,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+

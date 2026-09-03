@@ -98,7 +98,7 @@ export const reportData = {
 export const initialMessage = {
   id: 1,
   role: "assistant",
-  content: "Namaste! 🙏 I'm GrowPilot AI, your smart business assistant. I can help your customers check product availability, place orders, and answer questions. How can I assist you today?",
+  content: "Namaste! 🙏 I'm Verdant AI, your smart business assistant. I can help your customers check product availability, place orders, and answer questions. How can I assist you today?",
   time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
 };
 
@@ -117,7 +117,7 @@ export const quickPrompts = [
 ];
 
 // ─── AI System Prompt for Chat ────────────────────────────────────────
-export const chatSystemPrompt = `You are GrowPilot AI, a smart business assistant for a small Indian retail grocery shop called "Sharma General Store" in Bangalore.
+export const chatSystemPrompt = `You are Verdant AI, a smart business assistant for a small Indian retail grocery shop called "Sharma General Store" in Bangalore.
 
 You help customers check product availability, place orders, and answer FAQs.
 
@@ -146,3 +146,4 @@ export const marketingPresets = [
   { label: "Festival Offer", productName: "Cooking Oil 1L", offerPercent: "10", occasion: "Eid Al Adha", platform: "whatsapp" },
   { label: "Clearance Deal", productName: "Wheat Flour 5kg", offerPercent: "20", occasion: "Stock Clearance", platform: "facebook" },
 ];
+

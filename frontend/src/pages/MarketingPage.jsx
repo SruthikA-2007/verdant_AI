@@ -167,7 +167,7 @@ export default function MarketingPage({ onToast, business }) {
             <div className="mkt-empty card">
               <div className="mkt-empty-icon"><Sparkles size={32} /></div>
               <h3>Fill in the form and click Generate</h3>
-              <p>GrowPilot AI will create personalized marketing content for all your social platforms in seconds.</p>
+              <p>Verdant AI will create personalized marketing content for all your social platforms in seconds.</p>
             </div>
           )}
 
@@ -229,3 +229,4 @@ export default function MarketingPage({ onToast, business }) {
     </div>
   );
 }
+

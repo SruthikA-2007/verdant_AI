@@ -72,3 +72,4 @@ export function getRankedRecommendations(profile, topN = 3) {
     .sort((a, b) => b.score.overall - a.score.overall)
     .slice(0, topN);
 }
+

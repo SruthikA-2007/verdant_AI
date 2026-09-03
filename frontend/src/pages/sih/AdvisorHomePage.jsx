@@ -90,7 +90,7 @@ export default function AdvisorHomePage({ user, sihProfile }) {
       {/* Feature Cards */}
       <section className="advisor-home__features">
         <div className="advisor-home__features-header">
-          <h2>How GrowPilot AI Helps You</h2>
+          <h2>How Verdant AI Helps You</h2>
           <p>Five intelligent modules, built for rural micro-entrepreneurs.</p>
         </div>
         <div className="advisor-home__features-grid">
@@ -115,3 +115,4 @@ export default function AdvisorHomePage({ user, sihProfile }) {
     </div>
   );
 }
+

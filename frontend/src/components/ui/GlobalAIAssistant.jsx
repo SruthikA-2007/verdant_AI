@@ -103,7 +103,7 @@ export default function GlobalAIAssistant({ business }) {
         <section className="ai-panel animate-scale-in" aria-label="AI assistant panel">
           <header className="ai-panel__header">
             <div>
-              <p className="ai-panel__title"><Sparkles size={14} /> GrowPilot AI</p>
+              <p className="ai-panel__title"><Sparkles size={14} /> Verdant AI</p>
               <p className="ai-panel__subtitle">Business intelligence assistant</p>
             </div>
             <button className="ai-panel__close" type="button" onClick={() => setOpen(false)} aria-label="Close assistant">
@@ -150,3 +150,4 @@ export default function GlobalAIAssistant({ business }) {
     </>
   );
 }
+

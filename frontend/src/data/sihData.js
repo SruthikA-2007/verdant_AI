@@ -821,3 +821,4 @@ export const seasonalIndexData = {
     { month: 'Oct', index: 90 }, { month: 'Nov', index: 95 }, { month: 'Dec', index: 88 },
   ],
 };
+

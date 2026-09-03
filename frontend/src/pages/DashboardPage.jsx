@@ -124,7 +124,7 @@ export default function DashboardPage({ business }) {
             <div className="dash-card-header">
               <div>
                 <h2 className="dash-card-title">AI Recommendations</h2>
-                <p className="dash-card-sub">Powered by GrowPilot AI</p>
+                <p className="dash-card-sub">Powered by Verdant AI</p>
               </div>
               <button className="btn btn-ghost btn-icon"><RefreshCw size={15} /></button>
             </div>
@@ -244,3 +244,4 @@ export default function DashboardPage({ business }) {
     </div>
   );
 }
+

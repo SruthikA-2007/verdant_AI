@@ -247,3 +247,4 @@ Return ONLY valid JSON (no markdown, no explanation):
 
   return { sendChatMessage, generateMarketing, isLoading, error };
 }
+

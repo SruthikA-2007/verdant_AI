@@ -44,3 +44,4 @@ export const PRESET_SCENARIOS = [
   { id: 'cost-up',   label: 'Costs +15%',  sales:   0, cost:  15, price:  0 },
   { id: 'best',      label: 'Best Case',   sales:  20, cost: -10, price: 10 },
 ];
+

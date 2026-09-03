@@ -58,7 +58,7 @@ export default function ChatbotPage({ business }) {
               <Bot size={20} />
             </div>
             <div>
-              <h3>GrowPilot AI</h3>
+              <h3>Verdant AI</h3>
               <div className="chat-status">
                 <span className="chat-status-dot" />
                 Online • Replies instantly
@@ -119,7 +119,7 @@ export default function ChatbotPage({ business }) {
               <Bot size={16} />
             </div>
             <div>
-              <p className="chat-window-title">GrowPilot AI Assistant</p>
+              <p className="chat-window-title">Verdant AI Assistant</p>
               <p className="chat-window-sub">Online • Typically replies in &lt;2 seconds</p>
             </div>
             <div className="chat-window-powered">
@@ -196,3 +196,4 @@ export default function ChatbotPage({ business }) {
     </div>
   );
 }
+

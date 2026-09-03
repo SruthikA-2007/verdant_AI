@@ -37,7 +37,7 @@ export default function SIHSidebar({ user, onLogout, onToast }) {
           <Sparkles size={16} fill="currentColor" />
         </div>
         <div>
-          <span className="sih-sidebar__brand-name">GrowPilot AI</span>
+          <span className="sih-sidebar__brand-name">Verdant AI</span>
           <span className="sih-sidebar__brand-tag">SIH26091</span>
         </div>
       </div>
@@ -130,3 +130,4 @@ export default function SIHSidebar({ user, onLogout, onToast }) {
     </aside>
   );
 }
+

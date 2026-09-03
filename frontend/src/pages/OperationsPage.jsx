@@ -352,3 +352,4 @@ export default function OperationsPage({ business, onToast }) {
     </div>
   );
 }
+

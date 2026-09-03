@@ -172,7 +172,7 @@ export default function LandingPage() {
       <section className="landing__cta-banner">
         <div className="landing__cta-content">
           <h2>Ready to grow your business?</h2>
-          <p>Join 2,000+ store owners already using GrowPilot AI</p>
+          <p>Join 2,000+ store owners already using Verdant AI</p>
           <button className="btn btn-primary btn-lg" onClick={() => navigate('/login')}>
             Get Started Free <ArrowRight size={18} />
           </button>
@@ -183,7 +183,7 @@ export default function LandingPage() {
       <footer className="landing__footer">
         <div className="landing__footer-logo">
           <div className="landing__nav-icon" style={{width:24,height:24}}><Zap size={12} fill="white" /></div>
-          <span>GrowPilot AI</span>
+          <span>Verdant AI</span>
         </div>
         <div className="landing__footer-links">
           <a href="#">About</a>
@@ -191,8 +191,9 @@ export default function LandingPage() {
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
         </div>
-        <p className="landing__footer-copy">© 2026 GrowPilot AI. Made for Indian MSMEs. 🇮🇳</p>
+        <p className="landing__footer-copy">© 2026 Verdant AI. Made for Indian MSMEs. 🇮🇳</p>
       </footer>
     </div>
   );
 }
+

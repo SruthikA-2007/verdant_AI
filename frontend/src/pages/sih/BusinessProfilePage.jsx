@@ -252,3 +252,4 @@ export default function BusinessProfilePage({ onSave, onToast }) {
     </div>
   );
 }
+

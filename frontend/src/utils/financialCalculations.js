@@ -34,3 +34,4 @@ export function calculateFinancials(idea, profile) {
     breakEvenMonths,
   };
 }
+

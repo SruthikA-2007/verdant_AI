@@ -190,3 +190,4 @@ export default function HyperLocalAnalysisPage({ sihProfile, sihBusiness, onSave
     </div>
   );
 }
+

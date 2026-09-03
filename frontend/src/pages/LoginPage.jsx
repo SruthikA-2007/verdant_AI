@@ -82,7 +82,7 @@ export default function LoginPage({ onLogin, onToast }) {
                 </div>
               ))}
             </div>
-            <p><strong>2,000+</strong> store owners trust GrowPilot AI</p>
+            <p><strong>2,000+</strong> store owners trust Verdant AI</p>
           </div>
         </div>
 
